@@ -1,0 +1,16 @@
+header .wrapper > nav {
+    padding: 40px 0;
+    a {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 2px solid blue;
+        border-radius: 4px;
+        color: blue;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover {
+            border: 2px solid black;
+            color: black;
+        }
+    }
+}
