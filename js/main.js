@@ -1,9 +1,24 @@
-$(document).ready(function () {
+$(document).ready(function(){
+
     
-    /* hover handler for main nav */
-    $(".modules-select").hover(function () {
-        $(this).find("ul").removeClass("visuallyhidden");
-    }, function () {
-        $(this).find("ul").addClass("visuallyhidden");
+    /* make all .container children boxes the same height */
+    var highest = 0;
+    $('.container section').each(function() {
+        if($(this).outerHeight() > highest){
+            highest = $(this).outerHeight();
+        }
+        $(this).css('height',highest);
+        //console.log( index + ": " + highest);
     });
+    
+    $('.menu.button').click(function(event){
+        event.preventDefault();
+       $('.menu-overlay').addClass('open'); 
+    });
+    $('.menu-overlay .close').click(function(event){
+        event.preventDefault();
+       $('.menu-overlay').removeClass('open'); 
+    });
+    
+    
 });

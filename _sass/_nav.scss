@@ -1,16 +1,23 @@
 header .wrapper > nav {
+    @include clearfix;
     padding: 40px 0;
-    a {
-        display: inline-block;
-        padding: 10px 20px;
-        border: 2px solid blue;
-        border-radius: 4px;
-        color: blue;
-        text-decoration: none;
-        cursor: pointer;
-        &:hover {
-            border: 2px solid black;
-            color: black;
-        }
+    text-align: left;
+    
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #F1C40F;
+    border-radius: 4px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 1s;
+    box-shadow: 0px 1px 20px #ccc;
+    &:hover {
+        background: #F1C40F;
     }
+}
+.menu.button {
+    float: right;
 }

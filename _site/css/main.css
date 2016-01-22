@@ -105,6 +105,52 @@ body {
   max-width: 1140px;
   margin: 0 auto; }
 
+/* grid */
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em; }
+  .container::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .container .one-quarter {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    .container .one-quarter:last-child {
+      margin-right: 0; }
+  .container .half {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    .container .half:last-child {
+      margin-right: 0; }
+  .container .three-quarters {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%; }
+    .container .three-quarters:last-child {
+      margin-right: 0; }
+  .container .one-third {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    .container .one-third:last-child {
+      margin-right: 0; }
+  .container .two-thirds {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%; }
+    .container .two-thirds:last-child {
+      margin-right: 0; }
+
 .banner-small {
   padding: 40px 0;
   background-color: lightgoldenrodyellow;
@@ -128,7 +174,7 @@ body {
   .acknowledgement p {
     font-size: 0.875em;
     text-align: center;
-    max-width: 800px;
+    max-width: 820px;
     margin: 0 auto; }
 
 main {
@@ -138,11 +184,25 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'PT Mono', sans-serif;
   margin-top: 0; }
 
+h2.lesson-title {
+  margin-bottom: 40px; }
+
+p.highlight {
+  font-weight: bold;
+  color: #3498DB; }
+
+ul {
+  padding-left: 0;
+  list-style-position: outside;
+  margin-left: 20px; }
+  ul li {
+    margin-bottom: 1em; }
+
 /*
  * Tabs
  */
 ul.tabs {
-  border-bottom: 2px solid blue;
+  border-bottom: 2px solid #3498DB;
   margin: 40px 0; }
   ul.tabs::after {
     clear: both;
@@ -156,42 +216,108 @@ ul.tabs {
     margin: 0; }
     ul.tabs li a {
       display: block;
-      color: lightblue;
+      color: #adadad;
       text-decoration: none;
       padding: 0.618em 2em;
       margin-right: 3px;
       border-bottom: none;
-      border-left: 1px solid lightblue;
-      border-right: 1px solid lightblue;
-      border-top: 1px solid lightblue;
+      border-left: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      border-top: 1px solid #ccc;
       margin-bottom: -2px;
       border-top-left-radius: 4px;
       border-top-right-radius: 4px;
-      background: white; }
+      background: white;
+      transition: all 0.5s; }
       ul.tabs li a:hover {
-        background: blue; }
+        background: #3498DB;
+        color: white;
+        border-left: 1px solid #3498DB;
+        border-right: 1px solid #3498DB;
+        border-top: 1px solid #3498DB; }
       ul.tabs li a.current {
         background: #fff;
-        color: blue;
-        border-top: 2px solid blue;
-        border-left: 2px solid blue;
-        border-right: 2px solid blue;
+        color: #3498DB;
+        border-top: 2px solid #3498DB;
+        border-left: 2px solid #3498DB;
+        border-right: 2px solid #3498DB;
         border-bottom: 2px solid #fff;
         margin-bottom: -2px; }
 
+.well {
+  padding: 2.35765%;
+  border: 2px solid #1ABC9C; }
+  .well h3 {
+    color: #1ABC9C; }
+  .well.red {
+    border: 2px solid #E74C3C; }
+    .well.red h3 {
+      color: #E74C3C; }
+
+.large {
+  font-size: 1.2em; }
+
+.menu-overlay {
+  position: absolute;
+  z-index: 1000;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  padding-top: 40px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  transition: top 0.7s ease-in; }
+  .menu-overlay .container {
+    position: relative;
+    max-width: 1000px; }
+  .menu-overlay .close {
+    position: absolute;
+    right: 0;
+    color: #fff;
+    font-size: 1.5em;
+    font-family: 'PT Mono', sans-serif; }
+  .menu-overlay h3 {
+    color: #3498DB; }
+  .menu-overlay ol {
+    padding: 0;
+    list-style: none; }
+    .menu-overlay ol li {
+      margin: 5px 0;
+      color: #1ABC9C;
+      /*border: 1px solid black;
+      border-radius: 4px;
+      padding: 5px;*/ }
+      .menu-overlay ol li small {
+        display: block;
+        padding-left: 20px;
+        color: #f1f1f1; }
+  .menu-overlay.open {
+    top: 0; }
+
 header .wrapper > nav {
-  padding: 40px 0; }
-  header .wrapper > nav a {
-    display: inline-block;
-    padding: 10px 20px;
-    border: 2px solid blue;
-    border-radius: 4px;
-    color: blue;
-    text-decoration: none;
-    cursor: pointer; }
-    header .wrapper > nav a:hover {
-      border: 2px solid black;
-      color: black; }
+  padding: 40px 0;
+  text-align: left; }
+  header .wrapper > nav::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #F1C40F;
+  border-radius: 4px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 1s;
+  box-shadow: 0px 1px 20px #ccc; }
+  .button:hover {
+    background: #F1C40F; }
+
+.menu.button {
+  float: right; }
 
 /* ==========================================================================
    Helper classes
