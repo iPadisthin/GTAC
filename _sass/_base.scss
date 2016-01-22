@@ -159,17 +159,17 @@ ul.tabs {
 }
 
 .menu-overlay {
+    display: none;
     position: absolute;
     z-index: 1000;
-    top: -100%;
+    top: 0;
     left: 0;
-    width: 100%;
-    min-height: 100%;
+    right: 0;
+    bottom: 0;
     padding-top: 40px;
     background: rgba(0,0,0,0.8);
     color: white;
-    
-    transition: top 0.7s ease-in;
+    overflow: scroll;
     .container {
         position: relative;
         max-width: 1000px;
@@ -180,6 +180,9 @@ ul.tabs {
         color: #fff;
         font-size: 1.5em;
         font-family: 'PT Mono', sans-serif;
+    }
+    h2 {
+        margin-bottom: 30px;
     }
     h3 {
         color: #3498DB;
@@ -199,8 +202,5 @@ ul.tabs {
                 color: #f1f1f1;
             }
         }
-    }
-    &.open {
-        top: 0;
     }
 }

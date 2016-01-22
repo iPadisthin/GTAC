@@ -13,11 +13,11 @@ $(document).ready(function(){
     
     $('.menu.button').click(function(event){
         event.preventDefault();
-       $('.menu-overlay').addClass('open'); 
+       $('.menu-overlay').fadeIn(); 
     });
     $('.menu-overlay .close').click(function(event){
         event.preventDefault();
-       $('.menu-overlay').removeClass('open'); 
+       $('.menu-overlay').fadeOut(); 
     });
     
     

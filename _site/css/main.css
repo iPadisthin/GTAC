@@ -258,16 +258,17 @@ ul.tabs {
   font-size: 1.2em; }
 
 .menu-overlay {
+  display: none;
   position: absolute;
   z-index: 1000;
-  top: -100%;
+  top: 0;
   left: 0;
-  width: 100%;
-  min-height: 100%;
+  right: 0;
+  bottom: 0;
   padding-top: 40px;
   background: rgba(0, 0, 0, 0.8);
   color: white;
-  transition: top 0.7s ease-in; }
+  overflow: scroll; }
   .menu-overlay .container {
     position: relative;
     max-width: 1000px; }
@@ -277,6 +278,8 @@ ul.tabs {
     color: #fff;
     font-size: 1.5em;
     font-family: 'PT Mono', sans-serif; }
+  .menu-overlay h2 {
+    margin-bottom: 30px; }
   .menu-overlay h3 {
     color: #3498DB; }
   .menu-overlay ol {
@@ -292,8 +295,6 @@ ul.tabs {
         display: block;
         padding-left: 20px;
         color: #f1f1f1; }
-  .menu-overlay.open {
-    top: 0; }
 
 header .wrapper > nav {
   padding: 40px 0;
