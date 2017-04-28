@@ -114,7 +114,7 @@ body {
   .container::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   .container .one-quarter {
     float: left;
     display: block;
@@ -207,7 +207,7 @@ ul.tabs {
   ul.tabs::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   ul.tabs li {
     display: inline-block;
     float: left;
@@ -302,7 +302,7 @@ header .wrapper > nav {
   header .wrapper > nav::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
 
 .button {
   display: inline-block;
